@@ -34,10 +34,10 @@ model.compile(loss=cldice_loss, [...])
 
 # Or combine dice + cldice similiar to the experiments in the paper
 def combined_loss(y_true, y_pred):
-    alpha = 0.05
+    alpha = 0.5
     data_format="channels_last"
-    return (1 * dice_loss(data_format=data_format)(y_true, y_pred) + 
-            (1) * soft_cldice_loss(k=5, data_format=data_format)(y_true, y_pred))
+    return (alpha * dice_loss(data_format=data_format)(y_true, y_pred) + 
+            (1-alpha) * soft_cldice_loss(k=5, data_format=data_format)(y_true, y_pred))
             
 model.compile(loss= combined_loss, [...])
 
