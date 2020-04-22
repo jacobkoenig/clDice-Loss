@@ -1,4 +1,4 @@
-#clDice Loss Function  Keras/Tensorflow
+# clDice Loss Function  Keras/Tensorflow
 Implementation of [clDice - a Novel Connectivity-Preserving Loss Function for Vessel Segmentation (2019)](https://arxiv.org/abs/2003.07311) in Keras/Tensorflow
 
 Credit goes to [this repository](https://github.com/dmitrysarov/clDice/) which was used as a base for this implementation
